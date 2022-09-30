@@ -1,2 +1,2 @@
 # Novel
-An Esoteric programming language
+Official Source Code for Novel
