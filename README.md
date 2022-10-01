@@ -1,2 +1,2 @@
 # Novel
-Official Source Code for Novel
+Official Source Code for Piranha
