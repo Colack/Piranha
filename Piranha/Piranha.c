@@ -1,6 +1,6 @@
 #include "shell.h"
 
-// Main Method
+// Shell Method 
 int main() {
     getInput();
     return 0;
