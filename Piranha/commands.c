@@ -1,4 +1,4 @@
-#include "shellCommands.h"
+#include "commands.h"
 
 bool inInput = false;
 bool shownStartMessage = false;
