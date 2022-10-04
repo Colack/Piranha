@@ -1,2 +1,2 @@
 cd ./Piranha
-gcc Piranha.c shellCommands.c -o Piranha
+gcc Piranha.c commands.c error.c -o Piranha
