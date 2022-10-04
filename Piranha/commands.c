@@ -115,7 +115,7 @@ void piranha_shell() {
             piranha_startMessage();
             shownStartMessage = true;
         }
-        printf("Novel : ");
+        printf("Piranha : ");
 
         gets(consoleInput);
 
