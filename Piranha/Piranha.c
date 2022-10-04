@@ -1,4 +1,4 @@
-#include "shellCommands.h"
+#include "commands.h"
 
 int main() {
     piranha_shell();
