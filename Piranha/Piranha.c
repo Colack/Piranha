@@ -1,7 +1,6 @@
-#include "shell.h"
+#include "shellCommands.h"
 
-// Shell Method 
 int main() {
-    getInput();
+    piranha_shell();
     return 0;
 }
