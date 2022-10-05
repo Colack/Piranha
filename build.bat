@@ -4,7 +4,7 @@
   powershell write-host -fore green Compiling...
   
   cd ./Piranha
-  gcc Piranha.c commands.c error.c -o Piranha
+  gcc Piranha.c commands.c error.c shell.c -o Piranha
   
   powershell write-host -fore green Compiled
   
