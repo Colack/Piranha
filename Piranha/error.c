@@ -1,4 +1,4 @@
-#include "error.h";
+#include "error.h"
 
 void error(int line, char error[MAX_STRING]) {
     printf("%s Error : \n",PROGRAM_NAME);
