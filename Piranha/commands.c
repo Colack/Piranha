@@ -6,7 +6,6 @@ bool hasRecievedCommand = false;
 
 void piranha_startMessage() {
     printf("%s V%s (c) %s %d\n",PROGRAM_NAME,CURRENT_VERSION,MAINTAINER,YEAR);
-    printf("Licensed under the [%s] license.\n",LICENSE);
     printf("Type 'help' or 'start' to get started.\n");
 }
 
@@ -17,11 +16,26 @@ void piranha_cd() {
     
     printf("> ");
     
-    gets(directoryChange);
+    scanf("%s",directoryChange);
     chdir(directoryChange);
     
     printf("%s\n",getcwd(s, 100));
     
+    hasRecievedCommand = true;
+}
+
+void piranha_list() {
+    printf("\n");
+    DIR *d;
+    struct dirent *dir;
+    d = opendir(".");
+    if (d) {
+        while ((dir = readdir(d)) != NULL) {
+            printf("%s\n", dir->d_name);
+        }
+        closedir(d);
+    }
+    printf("\n");
     hasRecievedCommand = true;
 }
 
@@ -47,7 +61,7 @@ void piranha_delete() {
     
     char fileName[MAX_STRING] = "";
     printf("> ");
-    gets(fileName);
+    scanf("%s",fileName);
     
     if (remove(fileName) == 0) {
         printf("File '%s' deleted successfully.\n",fileName);
@@ -62,7 +76,7 @@ void piranha_new() {
     
     char fileName[MAX_STRING] = "";
     printf("> ");
-    gets(fileName);
+    scanf("%s",fileName);
     
     FILE *fp;
     fp = fopen (fileName, "w");
@@ -76,7 +90,7 @@ void piranha_read() {
     
     char fileName[MAX_STRING] = "";
     printf("> ");
-    gets(fileName);
+    scanf("%s",fileName);
     
     FILE *fp;
     char ch;
@@ -96,51 +110,12 @@ void piranha_read() {
 }
 
 void piranha_help() {
-    printf("cd - Changes the current directory.\n");
+    printf("\ncd - Changes the current directory.\n");
     printf("read - Reads a specified file.\n");
     printf("new - Creates a new file.\n");
     printf("delete - Deletes a file.\n");
     printf("start - Shows the start menu.\n");
     printf("exit - Exits the shell.\n");
-    printf("help - Shows this help menu.\n");
-}
-
-void piranha_shell() {
-    inInput = true;
-    while (inInput) {
-        char consoleInput[MAX_STRING] = "";
-        hasRecievedCommand = false;
-
-        if (!shownStartMessage) {
-            piranha_startMessage();
-            shownStartMessage = true;
-        }
-        printf("Piranha : ");
-
-        gets(consoleInput);
-
-        if (strcmp(consoleInput,"help")==0) {
-            piranha_help();
-        } else if (strcmp(consoleInput,"exit")==0) {
-            piranha_exit();
-        } else if (strcmp(consoleInput,"cd")==0) {
-            piranha_cd();
-        } else if (strcmp(consoleInput,"new")==0) {
-            piranha_new();
-        } else if (strcmp(consoleInput,"delete")==0) {
-            piranha_delete();
-        } else if (strcmp(consoleInput,"start")==0) {
-            piranha_start();
-        } else if (strcmp(consoleInput,"read")==0) {
-            piranha_read();
-        } else {
-            hasRecievedCommand = false;
-        }
-
-        if (!hasRecievedCommand) {
-            printf("Command '%s' not found.\nPlease use 'help' or 'start' to get started.\n",consoleInput);
-        }
-
-        hasRecievedCommand = true;
-    }
+    printf("help - Shows this help menu\n\n");
+    hasRecievedCommand = true;
 }
