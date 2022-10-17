@@ -36,6 +36,7 @@ class myString {
 }
 
 fun main() {
+    myString stringy = new myString("Hello World!");
     spew myString();
 }
 ```
