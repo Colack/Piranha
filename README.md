@@ -23,6 +23,7 @@ null
 
 ~~ Basic Functions
 spew ~~ Print
+spewln ~~ Print with a new line
 ask ~~ Input
 chomp ~~ Delete a variable
 fun ~~ Declare a function
