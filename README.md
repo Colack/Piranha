@@ -17,6 +17,7 @@ Here are all of the keywords:
 ~~ Variable Keywords
 int ~~ Integer
 str ~~ String
+bool ~~ Boolean
 any ~~ Any
 final ~~ Constant
 null
