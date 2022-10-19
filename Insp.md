@@ -1,5 +1,6 @@
 **The following projects are inspirations to Piranha:**    
-    
+
+[Charm](https://github.com/tim-hardcastle/Charm) (tim-hardcastle)
 [Aoki](https://github.com/monitrr/aoki) (monitrr)   
 [Monkey](https://github.com/m4dh4tt3r/monkey) (m4dh4tt3r)    
 [Kitty](https://github.com/vimkat/kitty) (vimkat)    
