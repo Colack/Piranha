@@ -1,8 +1,8 @@
 # Piranha
-Piranha is a programming language designed to have a simplified syntax with heavy power.  
+Piranha is a programming language designed to have a simplified syntax, and be like Python and Go.    
 It is currently on version **Alpha 1.0.0**   
 
-The language is designed to be a functional programming language, and will not support OOP programming.   
+The language is designed to be a functional programming language.   
 Here is a basic example of what the language will be like:
 
 ```piranha
